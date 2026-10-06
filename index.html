@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#181a17">
+  <meta name="description" content="Consulta la carta de Taquería El Asador Mix: tacos, tortas, platillos, por kilo, Paquete Mix y bebidas.">
+  <title>Menú · Taquería El Asador Mix</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23181a17'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Georgia' font-weight='bold' font-size='27' fill='%23ebaa42'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu">Ir al menú</a>
+  <header class="masthead" id="inicio">
+    <div class="masthead-inner">
+      <a class="wordmark" href="#inicio" aria-label="Taquería El Asador Mix, inicio">
+        <span class="eyebrow">TAQUERÍA</span>
+        <span class="brand-name" id="brand-name">El Asador <em>Mix</em></span>
+      </a>
+      <div class="masthead-right">
+        <span class="menu-label">LA CARTA</span>
+        <button class="text-button source-trigger" type="button">Ver carta original</button>
+      </div>
+    </div>
+    <div class="masthead-bottom"><span>Menú digital</span><span id="currency-label">Precios en MXN</span></div>
+  </header>
+
+  <nav class="category-bar" aria-label="Categorías del menú">
+    <div class="category-inner" id="category-nav"></div>
+    <div class="category-progress" aria-hidden="true"><div id="category-progress"></div></div>
+  </nav>
+
+  <main class="page-shell">
+    <p class="menu-note" id="menu-note"></p>
+    <div class="menu-layout">
+      <div class="menu-list" id="menu" tabindex="-1"></div>
+      <aside class="visual-column" aria-label="Imagen del producto que estás viendo">
+        <div class="visual-panel" id="visual-panel">
+          <div class="visual-top"><span id="visual-category">Tacos</span><span id="visual-counter">01 / 74</span></div>
+          <div class="visual-content" id="visual-content">
+            <div class="image-stage" id="image-stage">
+              <img id="product-image" width="600" height="680" alt="" decoding="async">
+              <div class="image-empty" id="image-empty" hidden><span>IMAGEN</span><strong>Fotografía pendiente</strong></div>
+              <span class="image-label" id="image-label">Imagen de la carta · referencia</span>
+            </div>
+            <div class="visual-caption">
+              <span class="eyebrow" id="visual-kind">EN EL MENÚ</span>
+              <h2 id="visual-name">Tacos al pastor</h2>
+              <div class="visual-price" id="visual-price">$18.00</div>
+              <p id="photo-note">Fotografía específica pendiente.</p>
+            </div>
+          </div>
+          <div class="visual-bottom">
+            <span>Desliza para explorar</span>
+            <div class="step-controls">
+              <button type="button" id="previous-product" aria-label="Producto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 7-5 5 5 5"/></svg></button>
+              <button type="button" id="next-product" aria-label="Producto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 7 5 5-5 5"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="promotions" aria-labelledby="promotions-title">
+      <div class="section-heading"><span class="eyebrow">DE LA CARTA ORIGINAL</span><h2 id="promotions-title">Promociones y servicio</h2></div>
+      <div id="promotions-list"></div>
+      <p class="service-note">Servicio de taquizas para fiestas y reuniones.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><img id="restaurant-logo" src="images/logo-original.webp" width="125" height="45" alt="Logotipo de Taquería El Asador Mix extraído de la carta" loading="lazy"><div><strong id="footer-name">Taquería El Asador Mix</strong><span>Precios de la carta compartida · MXN</span></div></div><a href="#inicio">Volver al inicio</a></footer>
+
+  <dialog class="source-dialog" id="source-dialog" aria-labelledby="source-title">
+    <div class="dialog-toolbar"><h2 id="source-title">Carta original</h2><button type="button" id="close-source" aria-label="Cerrar carta original">Cerrar <span aria-hidden="true">×</span></button></div>
+    <p>Estas son las dos páginas del PDF compartido. Las imágenes son ampliables con los controles del navegador.</p>
+    <img src="images/carta-1.webp" alt="Página 1 de la carta original: por kilo, Paquete Mix y promoción de tacos." width="558" height="759" loading="lazy">
+    <img src="images/carta-2.webp" alt="Página 2 de la carta original: tacos, tortas, platillos, arrachera y bebidas." width="645" height="854" loading="lazy">
+    <a id="source-link" href="https://es.restaurantguru.com/Taqueria-El-Asador-Mix-Tierra-Blanca/menu" target="_blank" rel="noopener noreferrer">Consultar también en Restaurant Guru</a>
+  </dialog>
+  <noscript><p class="noscript">Activa JavaScript para utilizar el menú interactivo. <a href="images/carta-2.webp">Ver carta</a> · <a href="images/carta-1.webp">Ver por kilo y paquete</a></p></noscript>
+</body>
+</html>
