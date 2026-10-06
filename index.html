@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241b16">
+  <meta name="description" content="Consulta el menú de Taquería El Asador Mix en Tierra Blanca, Veracruz: tacos, tortas, platillos, carnes por kilo y bebidas.">
+  <title>El Asador Mix · Menú</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23241b16'/%3E%3Cpath d='M34 8C39 23 52 27 49 42a18 18 0 0 1-35-3c0-9 6-15 11-20-1 10 4 12 5 14 6-9 6-16 4-25' fill='%23ffb735'/%3E%3Cpath d='M33 34c6 7 10 11 6 17-4 5-12 4-14-2-2-5 3-10 8-15' fill='%23d94126'/%3E%3C/svg%3E">
+  <link rel="preload" href="./assets/fonts/asador-display.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./assets/images/tacos-al-pastor.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#menu-content">Ir al menú</a>
+  <header class="masthead" id="inicio">
+    <div class="masthead-inner">
+      <a class="brand" href="#inicio" aria-label="Taquería El Asador Mix, inicio">
+        <span class="brand-kicker">TAQUERÍA</span>
+        <span class="brand-name">EL ASADOR <span class="brand-mix">Mix</span></span>
+      </a>
+      <span class="location"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Tierra Blanca, Veracruz</span>
+    </div>
+  </header>
+
+  <div class="page-heading container">
+    <div class="heading-title"><span class="eyebrow">DE LA CARTA A TU MESA</span><h1>EL MENÚ<span class="title-dot">.</span></h1></div>
+    <div class="menu-summary"><span class="menu-total" id="menu-total">Menú completo</span><span>Precios en pesos mexicanos</span></div>
+  </div>
+
+  <div class="navigation" id="navigation">
+    <div class="navigation-inner container">
+      <form class="search" role="search" id="search-form">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+        <label class="sr-only" for="menu-search">Buscar por nombre del producto</label>
+        <input id="menu-search" type="search" placeholder="¿Qué se te antoja?" autocomplete="off" maxlength="100" enterkeyhint="search">
+        <button class="search-clear" id="search-clear" type="button" aria-label="Borrar búsqueda" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+      </form>
+      <nav class="category-nav" id="category-nav" aria-label="Categorías del menú"></nav>
+    </div>
+  </div>
+
+  <main class="menu-layout container" id="menu-layout">
+    <aside class="preview-panel" id="preview-panel" aria-label="Producto seleccionado">
+      <div class="preview-card" id="preview-card">
+        <div class="preview-media" id="preview-media"></div>
+        <div class="preview-details">
+          <div class="preview-category-line"><span class="eyebrow" id="preview-category">Tacos</span><span class="preview-counter" id="preview-counter"></span></div>
+          <div class="preview-title-line"><h2 id="preview-name">Tacos al pastor</h2><p class="preview-price" id="preview-price"></p></div>
+          <p class="preview-description" id="preview-description" hidden></p>
+          <p class="image-note" id="image-note"></p>
+        </div>
+        <div class="preview-progress" aria-hidden="true"><span id="preview-progress-fill"></span></div>
+      </div>
+      <p class="preview-hint"><span class="selection-dot" aria-hidden="true"></span>Toca un producto o desliza para explorar.</p>
+    </aside>
+
+    <div class="menu-column" id="menu-content" tabindex="-1">
+      <p class="results-status" id="results-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="menu-sections"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+        <h2>No encontramos ese antojo.</h2>
+        <p id="empty-query"></p>
+        <button class="reset-button" id="reset-search" type="button">Ver todo el menú</button>
+      </div>
+      <noscript><div class="noscript-message">Activa JavaScript para explorar el menú interactivo. También puedes <a href="./assets/source/menu-original.pdf">consultar la carta original en PDF</a>.</div></noscript>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <div><span class="footer-brand">EL ASADOR <em>Mix</em></span><p>Taquería · Tierra Blanca, Veracruz</p></div>
+    <a href="./assets/source/menu-original.pdf" target="_blank" rel="noopener">Consultar la carta original <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H3v18h18v-7"/></svg></a>
+  </footer>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver al inicio" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10M12 20V8m-5 5 5-5 5 5"/></svg><span>Inicio</span></button>
+  <div class="sr-only" id="selection-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
